@@ -1,0 +1,19 @@
+.wrapp-form{
+    text-align: center;
+}
+
+a{
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+}
+
+.wrapp{
+    position: fixed;
+    width: 100%;
+}
+.left{
+    position: relative;
+    left: 1300px;
+}
