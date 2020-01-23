@@ -24,11 +24,13 @@ router.post('/tasks',  (req , res)=>{
   
     if(!req.body) return res.sendStatus(400);
     
-    const name = req.body.name;
+    const description = req.body.description;
+    const priority = req.body.priority;
 
     const newTask = new Task({
-        description: name,
-        completed : true
+        description: description,
+        completed : false,
+        priority : priority
     });
 
     newTask
