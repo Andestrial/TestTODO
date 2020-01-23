@@ -4,12 +4,11 @@ const router = express.Router();
 const Task = require('../models/tasks');
 const bcrypt = require('bcryptjs');
 
-router.get('/tasks', (req, res)=>{
-    Task.find({}, (err, task)=>{
-        if(err) return console.log(err);
-        res.send(task);
-    })
+router.get('/tasks',async (req, res)=>{
+    const task = await Task.find({}).sort({'priority': '1'});
+    res.send(task);
 })
+
 
 router.get('/tasks/:id', (req, res)=>{
 
