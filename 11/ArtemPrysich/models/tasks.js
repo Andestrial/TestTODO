@@ -9,6 +9,9 @@ const Task = mongoose.model('Task', {
     completed: {
         type: Boolean,
         default: false
+    },
+    priority : {
+        type : Number
     }
 })
 
